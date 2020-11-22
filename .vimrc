@@ -41,16 +41,22 @@ set modelines=4
 set exrc
 set secure
 " Enable line numbers
-set number
+"set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-set tabstop=2
+" Make tabs as wide as four spaces
+" set tabstop=4
+" If you're using actual tab character in your source code you probably also want these settings (these are actually the defaults, but you may want to set them defensively):
+" set softtabstop=0 noexpandtab
+" Finally, if you want an indent to correspond to a single tab, you should also use:
+" set shiftwidth=4
+" For indents that consist of 4 space characters but are entered with the tab key:
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
+"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+"set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -76,10 +82,10 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
+"if exists("&relativenumber")
+"	set relativenumber
+"	au BufReadPost * set relativenumber
+"endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
